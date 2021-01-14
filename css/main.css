@@ -1,0 +1,107 @@
+/*@import "./utils/functions";
+@import "./utils/mixins";
+@import "./utils/extensions";*/
+html {
+  font-size: 16px;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  width: 80%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul li {
+  list-style: none;
+}
+
+/* shrikhand-regular - latin: Police pour le logo et les titres */
+@font-face {
+  font-family: 'Shrikhand';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/shrikhand-v6-latin/shrikhand-v6-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/shrikhand-v6-latin/shrikhand-v6-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/shrikhand-v6-latin/shrikhand-v6-latin-regular.woff2") format("woff2"), url("../fonts/shrikhand-v6-latin/shrikhand-v6-latin-regular.woff") format("woff"), url("../fonts/shrikhand-v6-latin/shrikhand-v6-latin-regular.ttf") format("truetype"), url("../fonts/shrikhand-v6-latin/shrikhand-v6-latin-regular.svg#Shrikhand") format("svg");
+  /* Legacy iOS */
+}
+
+/* roboto-regular - latin: police pour le texte*/
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/roboto-v20-latin/roboto-v20-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/roboto-v20-latin/roboto-v20-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-v20-latin/roboto-v20-latin-regular.woff2") format("woff2"), url("../fonts/roboto-v20-latin/roboto-v20-latin-regular.woff") format("woff"), url("../fonts/roboto-v20-latin/roboto-v20-latin-regular.ttf") format("truetype"), url("../fonts/roboto-v20-latin/roboto-v20-latin-regular.svg#Roboto") format("svg");
+  /* Legacy iOS */
+}
+
+h1, h2, h3 {
+  font-family: 'Shrikhand';
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 1.3rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+
+p, a, button, li {
+  font-family: 'Roboto';
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+/*@import "./components/buttons";*/
+header {
+  margin: 3%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header div {
+  width: 50%;
+  text-align: center;
+}
+
+footer {
+  width: 100%;
+  background-color: #353535;
+  color: white;
+}
+
+footer a {
+  color: white;
+}
+
+/*@import "./layout/container";
+@import "./layout/form";
+
+
+@import "./pages/work";
+@import "./pages/about";
+@import "./pages/project";*/
+/*# sourceMappingURL=main.css.map */
