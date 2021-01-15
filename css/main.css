@@ -13,7 +13,9 @@ body {
 }
 
 img {
-  width: 80%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
 }
 
 a {
@@ -23,6 +25,10 @@ a {
 
 ul li {
   list-style: none;
+}
+
+ul {
+  padding: 0;
 }
 
 /* shrikhand-regular - latin: Police pour le logo et les titres */
@@ -47,20 +53,21 @@ ul li {
   /* Legacy iOS */
 }
 
-h1, h2, h3 {
+h1 {
   font-family: 'Shrikhand';
   font-weight: bold;
+  font-size: 2rem;
 }
 
-h1 {
-  font-size: 1.3rem;
-}
-
-h2 {
+section h2, aside h2, div h2 {
+  font-family: 'Roboto';
+  font-weight: bold;
   font-size: 1.2rem;
 }
 
 h3 {
+  font-family: 'Roboto';
+  font-weight: bold;
   font-size: 1.1rem;
 }
 
@@ -70,7 +77,16 @@ p, a, button, li {
   font-size: 1rem;
 }
 
-/*@import "./components/buttons";*/
+button {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  text-align: center;
+  padding: 2%;
+}
+
 header {
   margin: 3%;
   text-align: center;
@@ -91,17 +107,140 @@ footer {
   width: 100%;
   background-color: #353535;
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 footer a {
   color: white;
 }
 
+footer h2 {
+  font-family: 'Shrikhand';
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 0;
+}
+
+footer nav {
+  margin-left: 10px;
+}
+
 /*@import "./layout/container";
-@import "./layout/form";
+@import "./layout/form";*/
+.localisation {
+  text-align: center;
+  background-color: #C2C2C2;
+  -webkit-box-shadow: darkgray 1px 2px inset;
+          box-shadow: darkgray 1px 2px inset;
+}
 
+.localisation ul {
+  margin: 0;
+  padding: 10px;
+}
 
-@import "./pages/work";
-@import "./pages/about";
+main section {
+  text-align: center;
+  background-color: #F2F2F2;
+  padding: 50px;
+}
+
+main aside ul {
+  margin: 2%;
+}
+
+main aside ul :nth-child(1), main aside ul :nth-child(2) {
+  background-color: #F2F2F2;
+}
+
+main aside ul :nth-child(3) {
+  background-color: #FF79DA;
+}
+
+main aside ul span {
+  text-align: center;
+  vertical-align: middle;
+  background-color: #9356DC;
+  background-size: 10px 10px;
+  font-size: 0.5rem;
+  padding: 5px;
+  margin: 1%;
+  border-radius: 50%;
+  position: relative;
+  right: 30px;
+}
+
+main aside h2 {
+  text-align: center;
+}
+
+main aside li {
+  text-align: left;
+  padding: 5%;
+  margin: 5%;
+  border-radius: 15px;
+  -webkit-box-shadow: darkgray 1px 3px;
+          box-shadow: darkgray 1px 3px;
+  width: 70%;
+  white-space: nowrap;
+}
+
+#choix {
+  width: 100%;
+  padding: 3%;
+  background-color: #F2F2F2;
+}
+
+#choix h2 {
+  padding: 5%;
+}
+
+#choix article {
+  width: 90%;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  height: 300px;
+  border-radius: 12px;
+  background-color: white;
+  -webkit-box-shadow: #d9d9d9 1px 2px;
+          box-shadow: #d9d9d9 1px 2px;
+}
+
+#choix article img {
+  width: 100%;
+  height: 200px;
+  border-radius: 12px 12px 0 0;
+}
+
+#choix article h3 {
+  margin: 2%;
+}
+
+#choix article p {
+  margin: 0;
+}
+
+#choix article .new {
+  width: 70px;
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 2%;
+  position: relative;
+  bottom: 230px;
+  left: 280px;
+  background-color: #99E2D0;
+  color: #2c9c81;
+  border-radius: 5px;
+}
+
+/*@import "./pages/about";
 @import "./pages/project";*/
 /*# sourceMappingURL=main.css.map */

@@ -12,7 +12,8 @@ body
 
 img
 {
-    width:80%;
+    object-fit: cover;
+    overflow: hidden;
 }
 
 a
@@ -24,4 +25,9 @@ a
 ul li
 {
     list-style: none;
+}
+
+ul
+{
+    padding: 0;
 }

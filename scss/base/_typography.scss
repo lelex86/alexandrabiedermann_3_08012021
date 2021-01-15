@@ -27,30 +27,31 @@
   }
   
 
-h1, h2, h3
-  {
-    font-family: 'Shrikhand';
-    font-weight: bold;
-  }
-
 h1
 {
-  font-size: 1.3rem;
+  font-family: 'Shrikhand';
+  font-weight: bold;
+  font-size: 2rem;
 }
 
-h2
+
+section h2, aside h2, div h2
 {
+  font-family: 'Roboto';
+  font-weight: bold;
   font-size: 1.2rem;
 }
 
 h3
 {
+  font-family: 'Roboto';
+  font-weight: bold;
   font-size: 1.1rem;
 }
 
 p, a, button, li
-  {
-    font-family: 'Roboto';
-    font-weight: normal;
-    font-size: 1rem;
-  }  
+{
+  font-family: 'Roboto';
+  font-weight: normal;
+  font-size: 1rem;
+}  

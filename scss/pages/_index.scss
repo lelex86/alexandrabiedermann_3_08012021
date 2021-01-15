@@ -1,0 +1,117 @@
+.localisation
+{
+    text-align: center;
+    background-color: $color-fourth;
+    box-shadow: darken($color: $color-fourth, $amount: 10%) 1px 2px inset;
+    ul
+    {
+        margin: 0;
+        padding: 10px;
+    }
+}
+
+main
+{   
+    section
+    {
+        text-align: center;
+        background-color: $color-sixth;
+        padding: 50px;
+
+    }
+    aside
+    {
+        ul
+        {
+            margin: 2%;
+            :nth-child(1), :nth-child(2)
+            {
+                background-color: $color-sixth;
+            }
+            :nth-child(3)
+            {
+                background-color: $color-secondry;
+                
+            }
+            span
+            {
+            text-align: center;
+            vertical-align: middle;
+            background-color: $color-primary;
+            background-size: 10px 10px;
+            font-size: 0.5rem;
+            padding:5px;
+            margin: 1%;
+            border-radius: 50%;
+            position: relative;
+            right: 30px;
+            }
+        }
+
+        h2
+        {
+            text-align: center;
+        }
+        li
+        {
+            text-align: left;
+            padding: 5%;
+            margin: 5%;
+            border-radius: 15px;
+            box-shadow: darken($color: $color-fourth, $amount: 10%) 1px 3px;
+            width:70%;
+            white-space: nowrap;
+        }
+        
+    }
+}
+
+#choix
+{
+    width: 100%;
+    padding: 3%;
+    background-color: $color-sixth;
+    h2
+    {
+        padding:5%;
+    }
+    article
+    {
+        width:90%;
+        margin-top:4%;
+        margin-bottom: 4%;
+        height: 300px;
+        border-radius: 12px;
+        background-color: white;
+        box-shadow: darken($color: $color-sixth, $amount: 10%) 1px 2px;
+        img
+        {
+            width: 100%;
+            height:200px;
+            border-radius: 12px 12px 0 0;
+        }
+        h3
+        {
+            margin:2%;
+        }
+        p
+        {
+            margin: 0;
+        }
+        .new
+        {
+            width: 70px;
+            text-align: center;
+            font-size: 0.9rem;
+            padding:2%;
+            position: relative;
+            bottom: 230px;
+            left: 280px;
+            background-color: $color-tertiary;
+            color: darken($color: $color-tertiary, $amount: 35%);
+            border-radius: 5px;
+
+
+        }
+    }
+}
