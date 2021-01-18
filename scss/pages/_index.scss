@@ -1,63 +1,93 @@
 .localisation
 {
     text-align: center;
-    background-color: $color-fourth;
-    box-shadow: darken($color: $color-fourth, $amount: 10%) 1px 2px inset;
+    background-color: darken($color: $color-fourth, $amount: 10%);
+    box-shadow: darken($color: $color-fourth, $amount: 30%) 0px 1px 2px inset;
     ul
     {
         margin: 0;
         padding: 10px;
     }
+    i
+    {
+        padding-right: 5%;
+    }
 }
 
-main
+.index
 {   
     section
     {
         text-align: center;
-        background-color: $color-sixth;
+        background-color: $color-fourth;
         padding: 50px;
-
+        p
+        {
+            color:darken($color: $color-fourth, $amount: 40%)
+        }   
     }
     aside
     {
         ul
         {
             margin: 2%;
-            :nth-child(1), :nth-child(2)
+            li
             {
-                background-color: $color-sixth;
-            }
-            :nth-child(3)
-            {
-                background-color: $color-secondry;
-                
-            }
-            span
-            {
-            text-align: center;
-            vertical-align: middle;
-            background-color: $color-primary;
-            background-size: 10px 10px;
-            font-size: 0.5rem;
-            padding:5px;
-            margin: 1%;
-            border-radius: 50%;
-            position: relative;
-            right: 30px;
+                width:85%;
+                font-weight: 500;
+
+                &:nth-child(1), &:nth-child(2)
+                {
+                    background-color: $color-fourth;
+                    i
+                    {
+                        color:darken($color: $color-fourth, $amount: 40%)
+                    }
+                }
+                &:nth-child(3)
+                {
+                    background-color: lighten($color: $color-primary, $amount: 32%);
+                    i
+                    {
+                        color:$color-primary;
+                    }
+                }
+                span
+                {
+                    display: inline-block;    
+                    text-align: center;
+                    line-height: 20px;
+                    width: 20px;
+                    height: 20px;
+                    background-color: $color-primary;
+                    font-size: 0.8rem;
+                    color: white;
+                    padding:5px;
+                    margin: 1%;
+                    border-radius: 50%;
+                    position: relative;
+                    right: 10%;
+                }
+
+                i
+                {
+                    margin-left:0;
+                    margin-right: 5%;
+                }
             }
         }
 
         h2
         {
             text-align: center;
+            margin-left: 5%;
         }
         li
         {
             text-align: left;
-            padding: 5%;
+            padding: 3%;
             margin: 5%;
-            border-radius: 15px;
+            border-radius: 18px;
             box-shadow: darken($color: $color-fourth, $amount: 10%) 1px 3px;
             width:70%;
             white-space: nowrap;
@@ -70,47 +100,78 @@ main
 {
     width: 100%;
     padding: 3%;
-    background-color: $color-sixth;
+    background-color: $color-fourth;
     h2
     {
         padding:5%;
     }
     article
     {
+        
         width:90%;
         margin-top:4%;
         margin-bottom: 4%;
-        height: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 280px;
         border-radius: 12px;
         background-color: white;
-        box-shadow: darken($color: $color-sixth, $amount: 10%) 1px 2px;
+        box-shadow: darken($color: $color-fourth, $amount: 10%) 1px 2px;
         img
         {
             width: 100%;
             height:200px;
             border-radius: 12px 12px 0 0;
         }
-        h3
+        h3, p
         {
-            margin:2%;
+            margin-left: 2%;
+            margin-right: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding: 1%;
         }
-        p
-        {
-            margin: 0;
-        }
+        i
+            {
+                display: inline-block;
+                width: 35%;
+                font-size: 1.5rem;
+                text-align: right;
+                padding-right: 5%;
+                padding-top: 1%;
+            }
+
         .new
         {
-            width: 70px;
+            margin: 0;
             text-align: center;
             font-size: 0.9rem;
-            padding:2%;
+            padding-top:2%;
+            padding-bottom: 2%;
+            padding-right: 4%;
+            padding-left: 4%;
             position: relative;
-            bottom: 230px;
-            left: 280px;
+            bottom: 80%;
+            left: 70%;
             background-color: $color-tertiary;
             color: darken($color: $color-tertiary, $amount: 35%);
             border-radius: 5px;
 
+
+        }
+        .resto
+        {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            div
+            {
+                flex-grow: 2;
+            }
+
+            
+            
 
         }
     }

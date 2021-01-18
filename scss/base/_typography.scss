@@ -1,4 +1,4 @@
-/* shrikhand-regular - latin: Police pour le logo et les titres */
+/* shrikhand-regular - latin: Police pour le logo et les titres h1 */
 @font-face {
     font-family: 'Shrikhand';
     font-style: normal;
@@ -10,7 +10,7 @@
          url('../fonts/shrikhand-v6-latin/shrikhand-v6-latin-regular.woff') format('woff'), /* Modern Browsers */
          url('../fonts/shrikhand-v6-latin/shrikhand-v6-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
          url('../fonts/shrikhand-v6-latin/shrikhand-v6-latin-regular.svg#Shrikhand') format('svg'); /* Legacy iOS */
-  }
+}
 
   /* roboto-regular - latin: police pour le texte*/
 @font-face {
@@ -24,8 +24,33 @@
          url('../fonts/roboto-v20-latin/roboto-v20-latin-regular.woff') format('woff'), /* Modern Browsers */
          url('../fonts/roboto-v20-latin/roboto-v20-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
          url('../fonts/roboto-v20-latin/roboto-v20-latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
-  }
-  
+}
+ /* roboto-regular - latin: police pour certains titres*/
+ @font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/roboto-v20-latin/roboto-v20-latin-700.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/roboto-v20-latin/roboto-v20-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/roboto-v20-latin/roboto-v20-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/roboto-v20-latin/roboto-v20-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/roboto-v20-latin/roboto-v20-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/roboto-v20-latin/roboto-v20-latin-700.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+/* roboto-regular - latin: police pour certains titres*/
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/roboto-v20-latin/roboto-v20-latin-500.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/roboto-v20-latin/roboto-v20-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/roboto-v20-latin/roboto-v20-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/roboto-v20-latin/roboto-v20-latin-500.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/roboto-v20-latin/roboto-v20-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/roboto-v20-latin/roboto-v20-latin-500.svg#Roboto') format('svg'); /* Legacy iOS */
+}
 
 h1
 {
@@ -38,14 +63,14 @@ h1
 section h2, aside h2, div h2
 {
   font-family: 'Roboto';
-  font-weight: bold;
-  font-size: 1.2rem;
+  font-weight: 700;
+  font-size: 1.3rem;
 }
 
 h3
 {
   font-family: 'Roboto';
-  font-weight: bold;
+  font-weight: 700;
   font-size: 1.1rem;
 }
 
