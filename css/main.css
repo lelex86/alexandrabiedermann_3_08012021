@@ -121,6 +121,30 @@ button {
   padding-right: 10%;
 }
 
+.palette {
+  background-image: url(../../images/restaurants/palette.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.note {
+  background-image: url(../../images/restaurants/note.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.francaise {
+  background-image: url(../../images/restaurants/francaise.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.delice {
+  background-image: url(../../images/restaurants/delice.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
 header {
   margin: 3%;
   text-align: center;
@@ -351,10 +375,21 @@ footer li:nth-child(2) i {
           flex-grow: 2;
 }
 
-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+header i {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 6%;
+  left: 5%;
+}
+
+.menu .empty {
+  background-color: rgba(255, 255, 255, 0);
+  min-height: 200px;
+}
+
+.menu h2 {
+  font-weight: normal;
+  border-bottom: #99E2D0 2px solid;
 }
 
 .menu section {
@@ -369,26 +404,80 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 5%;
+  padding-right: 5%;
+  padding-left: 5%;
+  padding-top: 5%;
+  padding-bottom: 10%;
 }
 
 .menu article {
   background-color: white;
-  margin: 2%;
-  padding: 2%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 90%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-right: 1%;
+  margin-left: 1%;
+  padding: 4%;
+  width: 100%;
   border-radius: 15px;
 }
 
 .menu article h3, .menu article p {
   margin: 0;
+}
+
+.menu article p {
+  font-size: 0.9rem;
+}
+
+.menu article h3 {
+  font-size: 1rem;
+}
+
+.menu article div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu article div p:nth-child(2) {
+  font-weight: bold;
+}
+
+.carte {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 10%;
+}
+
+.carte div {
+  width: 100%;
+}
+
+.nom-resto {
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nom-resto i {
+  display: inline-block;
+  font-size: 1.2rem;
+  line-height: 70px;
+}
+
+.nom-resto h2 {
+  font-family: 'Shrikhand';
+  font-size: 1.5rem;
+  border: none;
 }
 /*# sourceMappingURL=main.css.map */
