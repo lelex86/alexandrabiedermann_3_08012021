@@ -7,6 +7,11 @@ body
 {
     width:100%;
     margin: 0; 
+    @include ordi
+    {
+        width:90%;
+        margin: auto;
+    }
 }
 
 body, main, h1, h2, h3, section, article, aside, img, p, header, footer

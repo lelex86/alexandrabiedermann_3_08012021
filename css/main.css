@@ -1,6 +1,73 @@
-/*@import "./utils/functions";
-@import "./utils/mixins";
-@import "./utils/extensions";*/
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  10% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  70% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  10% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  70% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes index {
+  0% {
+    -webkit-transform: translateX(-9999px);
+            transform: translateX(-9999px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes index {
+  0% {
+    -webkit-transform: translateX(-9999px);
+            transform: translateX(-9999px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
 html {
   font-size: 18px;
 }
@@ -8,6 +75,13 @@ html {
 body {
   width: 100%;
   margin: 0;
+}
+
+@media screen and (min-width: 1025px) {
+  body {
+    width: 90%;
+    margin: auto;
+  }
 }
 
 body, main, h1, h2, h3, section, article, aside, img, p, header, footer {
@@ -121,6 +195,20 @@ button {
   padding-right: 10%;
 }
 
+@media screen and (min-width: 1025px) {
+  button {
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 800px) and (max-width: 1025px) {
+  button {
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
+}
+
 .palette {
   background-image: url(../../images/restaurants/palette.jpg);
   background-size: 100% auto;
@@ -131,6 +219,8 @@ button {
   background-image: url(../../images/restaurants/note.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
+  -o-object-position: bottom;
+     object-position: bottom;
 }
 
 .francaise {
@@ -145,6 +235,30 @@ button {
   background-repeat: no-repeat;
 }
 
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-animation: index 0ms 3s both;
+          animation: index 0ms 3s both;
+}
+
+.spinner-container {
+  width: 400px;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-animation: spinner 3s 0s both;
+          animation: spinner 3s 0s both;
+}
+
+.spinner-container .spinner {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
 header {
   margin: 3%;
   text-align: center;
@@ -156,9 +270,20 @@ header {
           justify-content: center;
 }
 
+header h1 {
+  margin: 0;
+}
+
 header div {
   width: 50%;
   text-align: center;
+}
+
+header i {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 3%;
+  left: 5%;
 }
 
 footer {
@@ -204,8 +329,6 @@ footer li:nth-child(2) i {
   margin-right: 2%;
 }
 
-/*@import "./layout/container";
-@import "./layout/form";*/
 .localisation {
   text-align: center;
   background-color: #d9d9d9;
@@ -222,14 +345,58 @@ footer li:nth-child(2) i {
   padding-right: 5%;
 }
 
+@media screen and (min-width: 1025px) {
+  .index {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 2%;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 800px) and (max-width: 1025px) {
+  .index {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 2%;
+  }
+}
+
 .index section {
   text-align: center;
   background-color: #F2F2F2;
   padding: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .index section p {
   color: #8c8c8c;
+}
+
+.index section h2 {
+  text-align: center;
+}
+
+@media screen and (min-width: 1025px) {
+  .index aside {
+    width: 50%;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 800px) and (max-width: 1025px) {
+  .index aside {
+    width: 50%;
+  }
 }
 
 .index aside ul {
@@ -300,8 +467,30 @@ footer li:nth-child(2) i {
   background-color: #F2F2F2;
 }
 
+@media screen and (min-width: 1025px) {
+  #choix {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 800px) and (max-width: 1025px) {
+  #choix {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 #choix h2 {
-  padding: 5%;
+  padding: 3%;
+  width: 100%;
+  margin: 0%;
 }
 
 #choix article {
@@ -315,6 +504,18 @@ footer li:nth-child(2) i {
   background-color: white;
   -webkit-box-shadow: #d9d9d9 1px 2px;
           box-shadow: #d9d9d9 1px 2px;
+}
+
+@media screen and (orientation: landscape) and (min-width: 800px) and (max-width: 1025px) {
+  #choix article {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  #choix article {
+    width: 40%;
+  }
 }
 
 #choix article img {
@@ -375,16 +576,21 @@ footer li:nth-child(2) i {
           flex-grow: 2;
 }
 
-header i {
-  font-size: 1.5rem;
-  position: absolute;
-  top: 6%;
-  left: 5%;
-}
-
 .menu .empty {
   background-color: rgba(255, 255, 255, 0);
-  min-height: 200px;
+  min-height: 230px;
+}
+
+@media screen and (min-width: 1025px) {
+  .menu .empty {
+    min-height: 500px;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 800px) and (max-width: 1025px) {
+  .menu .empty {
+    min-height: 500px;
+  }
 }
 
 .menu h2 {
@@ -399,11 +605,13 @@ header i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-right: 5%;
   padding-left: 5%;
   padding-top: 5%;
@@ -427,10 +635,15 @@ header i {
 
 .menu article p {
   font-size: 0.9rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  white-space: nowrap;
 }
 
 .menu article h3 {
   font-size: 1rem;
+  width: 100%;
 }
 
 .menu article div {
@@ -452,11 +665,43 @@ header i {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin-bottom: 10%;
+  width: 100%;
+}
+
+.carte h2 {
+  width: 50px;
+  overflow: visible;
 }
 
 .carte div {
   width: 100%;
+}
+
+@media screen and (min-width: 1025px) {
+  .carte div {
+    width: 40%;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 800px) and (max-width: 1025px) {
+  .carte div {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .carte div article div {
+    width: 100%;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 800px) and (max-width: 1025px) {
+  .carte div article div {
+    width: 100%;
+  }
 }
 
 .nom-resto {

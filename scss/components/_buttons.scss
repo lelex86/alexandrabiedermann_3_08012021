@@ -9,4 +9,14 @@ button
     padding-bottom: 5%;
     padding-left: 10%;
     padding-right: 10%;
+    @include ordi
+    {
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+    @include tablette
+    {
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
 }

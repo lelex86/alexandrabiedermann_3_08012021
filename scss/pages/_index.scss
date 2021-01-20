@@ -16,18 +16,46 @@
 
 .index
 {   
+    @include ordi
+    {
+        display: flex;
+        margin-bottom: 2%;
+    }
+    @include tablette
+    {
+        display: flex;
+        margin-bottom: 2%;
+    }
+    
     section
     {
         text-align: center;
         background-color: $color-fourth;
         padding: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         p
         {
             color:darken($color: $color-fourth, $amount: 40%)
+        }
+        h2
+        {
+            text-align: center;
         }   
     }
     aside
     {
+       
+        @include ordi
+        {
+            width: 50%;
+        }
+        @include tablette
+        {
+            width: 50%;
+        }
+
         ul
         {
             margin: 2%;
@@ -101,13 +129,32 @@
     width: 100%;
     padding: 3%;
     background-color: $color-fourth;
+    @include ordi
+    {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    @include tablette
+    {
+        display: flex;
+        flex-wrap: wrap;
+    }
     h2
     {
-        padding:5%;
+        padding:3%;
+        width: 100%;
+        margin: 0%;
     }
     article
     {
-        
+        @include tablette
+        {
+            width: 40%;
+        }
+        @include ordi
+        {
+            width: 40%;
+        }
         width:90%;
         margin-top:4%;
         margin-bottom: 4%;
