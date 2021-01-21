@@ -42,6 +42,7 @@
         padding: 4%;
         width: 100%;
         border-radius: 15px;
+        
         h3,p
         {
             margin: 0;
@@ -105,6 +106,21 @@
             }
         }
     }
+    
+    article:focus
+    {
+        article::after
+        {
+            content: "";
+            background-image: url(../../images/anim/check-circle.svg);
+            background-color: $color-tertiary;
+            background-size: 30px 30px;
+            border-radius: 0 15px 15px 0;
+        }
+    }
+    
+   
+    
 }
 
 .nom-resto
@@ -125,3 +141,80 @@
         border: none;
     }
 }
+
+.entrees
+{
+    h2
+    {
+        animation: menu 1s 0ms ease-out both;
+    }
+    article
+    {
+        &:nth-child(2)
+        {
+            animation: menu 1s 200ms ease-out both;
+        }
+        &:nth-child(3)
+        {
+            animation: menu 1s 400ms ease-out both;
+        }
+        &:nth-child(4)
+        {
+            animation: menu 1s 600ms ease-out both;
+        }
+        &:nth-child(5)
+        {
+            animation: menu 1s 800ms ease-out both;
+        }
+    }
+  
+}
+
+.plats
+{
+    h2
+    {
+        animation: menu 1s 1000ms ease-out both;
+    }
+    article
+    {
+        &:nth-child(2)
+        {
+            animation: menu 1s 1200ms ease-out both;
+        }
+        &:nth-child(3)
+        {
+            animation: menu 1s 1400ms ease-out both;
+        }
+        &:nth-child(4)
+        {
+            animation: menu 1s 1600ms ease-out both;
+        }
+        
+    }
+}
+
+.desserts
+{
+    h2
+    {
+        animation: menu 1s 1800ms ease-out both;
+    }
+    article
+    {
+        &:nth-child(2)
+        {
+            animation: menu 1s 2000ms ease-out both;
+        }
+        &:nth-child(3)
+        {
+            animation: menu 1s 2200ms ease-out both;
+        }
+        &:nth-child(4)
+        {
+            animation: menu 1s 2400ms ease-out both;
+        }
+    }
+    
+}
+
