@@ -1,0 +1,32 @@
+.heart
+{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    &:hover
+    {
+        .heart--full
+        {
+            animation: heart 700ms ease-out 0ms both;
+        }
+    }
+}
+
+.heart--empty
+{
+    display: inline-block;
+    position: absolute;
+    z-index: 2;
+    font-size: 1.3rem;
+}
+
+.heart--full
+{
+    display: inline-block;
+    position: absolute;
+    z-index: 1;
+    font-size: 1.3rem; 
+    color:$color-primary;
+    opacity: 0;
+    transform-origin: bottom;
+}

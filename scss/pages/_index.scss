@@ -63,6 +63,7 @@
             {
                 width:85%;
                 font-weight: 500;
+                position: relative;
 
                 &:nth-child(1), &:nth-child(2)
                 {
@@ -93,10 +94,10 @@
                     padding:5px;
                     margin: 1%;
                     border-radius: 50%;
-                    position: relative;
-                    right: 10%;
+                    position: absolute;
+                    bottom: 7%;
+                    right: 97%;
                 }
-
                 i
                 {
                     margin-left:0;
@@ -104,7 +105,6 @@
                 }
             }
         }
-
         h2
         {
             text-align: center;
@@ -119,8 +119,7 @@
             box-shadow: darken($color: $color-fourth, $amount: 10%) 1px 3px;
             width:70%;
             white-space: nowrap;
-        }
-        
+        } 
     }
 }
 
@@ -178,33 +177,25 @@
             margin-bottom: 0;
             padding: 1%;
         }
-        i
-            {
-                display: inline-block;
-                width: 35%;
-                font-size: 1.5rem;
-                text-align: right;
-                padding-right: 5%;
-                padding-top: 1%;
-            }
-
-        .new
+        span
         {
             margin: 0;
             text-align: center;
             font-size: 0.9rem;
-            padding-top:2%;
-            padding-bottom: 2%;
-            padding-right: 4%;
-            padding-left: 4%;
-            position: relative;
-            bottom: 80%;
-            left: 70%;
+            padding-top:1%;
+            padding-bottom: 1%;
+            padding-right: 2%;
+            padding-left: 2%;
+            position: absolute;
+            right: 10%;
+            top:5%;
             background-color: $color-tertiary;
             color: darken($color: $color-tertiary, $amount: 35%);
             border-radius: 5px;
-
-
+        }
+        a div:nth-child(1)
+        {
+            position: relative;
         }
         .resto
         {
@@ -216,10 +207,6 @@
             {
                 flex-grow: 2;
             }
-
-            
-            
-
         }
     }
 }

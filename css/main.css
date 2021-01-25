@@ -192,23 +192,27 @@
 
 @-webkit-keyframes check1 {
   0% {
-    -webkit-transform: translateX(9999px);
-            transform: translateX(9999px);
+    -webkit-transform: translateX(80px);
+            transform: translateX(80px);
+    opacity: 0;
   }
   100% {
     -webkit-transform: translateX(0);
             transform: translateX(0);
+    opacity: 1;
   }
 }
 
 @keyframes check1 {
   0% {
-    -webkit-transform: translateX(9999px);
-            transform: translateX(9999px);
+    -webkit-transform: translateX(80px);
+            transform: translateX(80px);
+    opacity: 0;
   }
   100% {
     -webkit-transform: translateX(0);
             transform: translateX(0);
+    opacity: 1;
   }
 }
 
@@ -231,6 +235,24 @@
   100% {
     -webkit-transform: rotate(2turn);
             transform: rotate(2turn);
+  }
+}
+
+@-webkit-keyframes heart {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes heart {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -351,20 +373,28 @@ p, a, button, li {
 button {
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  z-index: 1;
   color: white;
   border: none;
   border-radius: 50px;
   text-align: center;
-  padding-top: 5%;
-  padding-bottom: 5%;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding: 5% 10%;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+}
+
+button:active {
+  background: -webkit-gradient(linear, left top, left bottom, from(#fface8), to(#ae80e5));
+  background: linear-gradient(to bottom, #fface8, #ae80e5);
 }
 
 @media screen and (min-width: 1025px) {
   button {
-    padding-top: 3%;
-    padding-bottom: 3%;
+    padding: 3% 10%;
+  }
+  button:hover {
+    background: -webkit-gradient(linear, left top, left bottom, from(#fface8), to(#ae80e5));
+    background: linear-gradient(to bottom, #fface8, #ae80e5);
   }
 }
 
@@ -376,13 +406,13 @@ button {
 }
 
 .palette {
-  background-image: url(../../images/restaurants/palette.jpg);
+  background-image: url(../images/restaurants/palette.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
 
 .note {
-  background-image: url(../../images/restaurants/note.jpg);
+  background-image: url(../images/restaurants/note.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
   -o-object-position: bottom;
@@ -390,13 +420,13 @@ button {
 }
 
 .francaise {
-  background-image: url(../../images/restaurants/francaise.jpg);
+  background-image: url(../images/restaurants/francaise.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
 
 .delice {
-  background-image: url(../../images/restaurants/delice.jpg);
+  background-image: url(../images/restaurants/delice.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
@@ -409,9 +439,108 @@ button {
           animation: index 0ms 3s both;
 }
 
+.heart {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+.heart:hover .heart--full {
+  -webkit-animation: heart 700ms ease-out 0ms both;
+          animation: heart 700ms ease-out 0ms both;
+}
+
+.heart--empty {
+  display: inline-block;
+  position: absolute;
+  z-index: 2;
+  font-size: 1.3rem;
+}
+
+.heart--full {
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  font-size: 1.3rem;
+  color: #9356DC;
+  opacity: 0;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+header {
+  margin: 3%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header div {
+  width: 50%;
+  text-align: center;
+}
+
+header i {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 3%;
+  left: 5%;
+}
+
+footer {
+  width: 100%;
+  background-color: #3a3a3a;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 5%;
+}
+
+footer a {
+  color: white;
+}
+
+footer h2 {
+  font-family: 'Shrikhand';
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 0;
+}
+
+footer nav {
+  margin-left: 10px;
+}
+
+footer li {
+  margin: 2%;
+}
+
+footer li:nth-child(1) i {
+  margin-right: 3.6%;
+}
+
+footer li:nth-child(2) i {
+  margin-right: 2%;
+}
+
 .spinner-container {
-  width: 250px;
-  height: 250px;
+  width: 260px;
+  height: 260px;
   position: absolute;
   left: 20%;
   top: 50%;
@@ -419,8 +548,8 @@ button {
 
 @media screen and (min-width: 1025px) {
   .spinner-container {
-    width: 400px;
-    height: 400px;
+    width: 410px;
+    height: 410px;
     left: 35%;
   }
 }
@@ -510,76 +639,6 @@ button {
           animation: spinner 3s 0s both;
 }
 
-header {
-  margin: 3%;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-header h1 {
-  margin: 0;
-}
-
-header div {
-  width: 50%;
-  text-align: center;
-}
-
-header i {
-  font-size: 1.5rem;
-  position: absolute;
-  top: 3%;
-  left: 5%;
-}
-
-footer {
-  width: 100%;
-  background-color: #3a3a3a;
-  color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 5%;
-}
-
-footer a {
-  color: white;
-}
-
-footer h2 {
-  font-family: 'Shrikhand';
-  font-size: 1.1rem;
-  font-weight: bold;
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-bottom: 0;
-}
-
-footer nav {
-  margin-left: 10px;
-}
-
-footer li {
-  margin: 2%;
-}
-
-footer li:nth-child(1) i {
-  margin-right: 3.6%;
-}
-
-footer li:nth-child(2) i {
-  margin-right: 2%;
-}
-
 .localisation {
   text-align: center;
   background-color: #d9d9d9;
@@ -657,6 +716,7 @@ footer li:nth-child(2) i {
 .index aside ul li {
   width: 85%;
   font-weight: 500;
+  position: relative;
 }
 
 .index aside ul li:nth-child(1), .index aside ul li:nth-child(2) {
@@ -687,8 +747,9 @@ footer li:nth-child(2) i {
   padding: 5px;
   margin: 1%;
   border-radius: 50%;
-  position: relative;
-  right: 10%;
+  position: absolute;
+  bottom: 7%;
+  right: 97%;
 }
 
 .index aside ul li i {
@@ -783,29 +844,24 @@ footer li:nth-child(2) i {
   padding: 1%;
 }
 
-#choix article i {
-  display: inline-block;
-  width: 35%;
-  font-size: 1.5rem;
-  text-align: right;
-  padding-right: 5%;
-  padding-top: 1%;
-}
-
-#choix article .new {
+#choix article span {
   margin: 0;
   text-align: center;
   font-size: 0.9rem;
-  padding-top: 2%;
-  padding-bottom: 2%;
-  padding-right: 4%;
-  padding-left: 4%;
-  position: relative;
-  bottom: 80%;
-  left: 70%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-right: 2%;
+  padding-left: 2%;
+  position: absolute;
+  right: 10%;
+  top: 5%;
   background-color: #99E2D0;
   color: #2c9c81;
   border-radius: 5px;
+}
+
+#choix article a div:nth-child(1) {
+  position: relative;
 }
 
 #choix article .resto {
@@ -863,51 +919,7 @@ footer li:nth-child(2) i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-right: 5%;
-  padding-left: 5%;
-  padding-top: 5%;
-  padding-bottom: 10%;
-}
-
-.menu article {
-  background-color: white;
-  margin-top: 2%;
-  margin-bottom: 2%;
-  margin-right: 1%;
-  margin-left: 1%;
-  padding: 4%;
-  width: 100%;
-  border-radius: 15px;
-}
-
-.menu article h3, .menu article p {
-  margin: 0;
-}
-
-.menu article p {
-  font-size: 0.9rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  white-space: nowrap;
-}
-
-.menu article h3 {
-  font-size: 1rem;
-  width: 100%;
-}
-
-.menu article div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.menu article div p:nth-child(2) {
-  font-weight: bold;
+  padding: 5px 5px 10px;
 }
 
 .carte {
@@ -922,45 +934,189 @@ footer li:nth-child(2) i {
   width: 100%;
 }
 
+.carte article {
+  background-color: white;
+  padding: 2%;
+  width: 100%;
+  border-radius: 15px;
+  text-overflow: ellipsis;
+}
+
+.carte article h3, .carte article p {
+  margin: 0;
+}
+
+.carte article p {
+  font-size: 0.9rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  white-space: nowrap;
+}
+
+.carte article h3 {
+  font-size: 1rem;
+  width: 100%;
+}
+
+.carte article div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.carte article div p:nth-child(2) {
+  font-weight: bold;
+}
+
 .carte h2 {
   width: 50px;
   overflow: visible;
 }
 
-.carte div {
+.carte .entrees, .carte .plats, .carte .desserts {
   width: 100%;
 }
 
-@media screen and (min-width: 1025px) {
-  .carte div {
-    width: 40%;
-  }
+.carte .entrees div, .carte .plats div, .carte .desserts div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2% 1%;
+  padding: 0;
+  position: relative;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
 }
 
-@media screen and (orientation: landscape) and (min-width: 800px) and (max-width: 1025px) {
-  .carte div {
-    width: 40%;
-  }
+.carte .entrees div article, .carte .plats div article, .carte .desserts div article {
+  z-index: 2;
 }
 
-@media screen and (min-width: 1025px) {
-  .carte div article div {
-    width: 100%;
-  }
-}
-
-@media screen and (orientation: landscape) and (min-width: 800px) and (max-width: 1025px) {
-  .carte div article div {
-    width: 100%;
-  }
-}
-
-.carte article:focus article::after {
-  content: "";
-  background-image: url(../../images/anim/check-circle.svg);
+.carte .entrees div .check, .carte .plats div .check, .carte .desserts div .check {
   background-color: #99E2D0;
-  background-size: 30px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 45px;
+  width: 60px;
+  padding: 3%;
+  margin: 0;
   border-radius: 0 15px 15px 0;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  position: absolute;
+  z-index: 1;
+  bottom: 0px;
+  right: 0px;
+}
+
+.carte .entrees div .check i, .carte .plats div .check i, .carte .desserts div .check i {
+  display: block;
+  -webkit-animation: check2 1s ease-out 0ms both;
+          animation: check2 1s ease-out 0ms both;
+  background-color: white;
+  color: #99E2D0;
+  text-align: center;
+  line-height: 30px;
+  width: 30px;
+  height: 30px;
+  font-size: 1.3rem;
+  padding: 1%;
+  border-radius: 50%;
+}
+
+.carte .entrees div:active article, .carte .plats div:active article, .carte .desserts div:active article {
+  border-radius: 15px 0 0 15px;
+  width: 80%;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+.carte .entrees div:active .check, .carte .plats div:active .check, .carte .desserts div:active .check {
+  -webkit-animation: check1 1s ease-out 0ms both;
+          animation: check1 1s ease-out 0ms both;
+}
+
+.carte .entrees div:active .check i, .carte .plats div:active .check i, .carte .desserts div:active .check i {
+  -webkit-animation: check2 1s ease-out 0ms both;
+          animation: check2 1s ease-out 0ms both;
+}
+
+@media screen and (min-width: 1025px) {
+  .carte .entrees, .carte .plats, .carte .desserts {
+    width: 40%;
+  }
+  .carte .entrees div:hover article, .carte .plats div:hover article, .carte .desserts div:hover article {
+    border-radius: 15px 0 0 15px;
+    width: 80%;
+    -webkit-transition-duration: 1s;
+            transition-duration: 1s;
+    -webkit-transition-delay: 200ms;
+            transition-delay: 200ms;
+  }
+  .carte .entrees div:hover .check, .carte .plats div:hover .check, .carte .desserts div:hover .check {
+    background-color: #99E2D0;
+    -webkit-animation: check1 1s ease-out 0ms both;
+            animation: check1 1s ease-out 0ms both;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: inherit;
+    width: 50px;
+    padding: 3%;
+    margin: 0;
+    border-radius: 0 15px 15px 0;
+    -webkit-transform-origin: right;
+            transform-origin: right;
+  }
+  .carte .entrees div:hover .check i, .carte .plats div:hover .check i, .carte .desserts div:hover .check i {
+    display: block;
+    -webkit-animation: check2 1s ease-out 0ms both;
+            animation: check2 1s ease-out 0ms both;
+    background-color: white;
+    color: #99E2D0;
+    text-align: center;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    font-size: 1.3rem;
+    padding: 1%;
+    border-radius: 50%;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 800px) and (max-width: 1025px) {
+  .carte .entrees, .carte .plats, .carte .desserts {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .carte .entrees article div, .carte .plats article div, .carte .desserts article div {
+    width: 100%;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 800px) and (max-width: 1025px) {
+  .carte .entrees article div, .carte .plats article div, .carte .desserts article div {
+    width: 100%;
+  }
 }
 
 .nom-resto {
@@ -971,12 +1127,9 @@ footer li:nth-child(2) i {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.nom-resto i {
-  display: inline-block;
-  font-size: 1.2rem;
-  line-height: 70px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .nom-resto h2 {
@@ -990,22 +1143,22 @@ footer li:nth-child(2) i {
           animation: menu 1s 0ms ease-out both;
 }
 
-.entrees article:nth-child(2) {
+.entrees div:nth-child(2) {
   -webkit-animation: menu 1s 200ms ease-out both;
           animation: menu 1s 200ms ease-out both;
 }
 
-.entrees article:nth-child(3) {
+.entrees div:nth-child(3) {
   -webkit-animation: menu 1s 400ms ease-out both;
           animation: menu 1s 400ms ease-out both;
 }
 
-.entrees article:nth-child(4) {
+.entrees div:nth-child(4) {
   -webkit-animation: menu 1s 600ms ease-out both;
           animation: menu 1s 600ms ease-out both;
 }
 
-.entrees article:nth-child(5) {
+.entrees div:nth-child(5) {
   -webkit-animation: menu 1s 800ms ease-out both;
           animation: menu 1s 800ms ease-out both;
 }
@@ -1015,17 +1168,17 @@ footer li:nth-child(2) i {
           animation: menu 1s 1000ms ease-out both;
 }
 
-.plats article:nth-child(2) {
+.plats div:nth-child(2) {
   -webkit-animation: menu 1s 1200ms ease-out both;
           animation: menu 1s 1200ms ease-out both;
 }
 
-.plats article:nth-child(3) {
+.plats div:nth-child(3) {
   -webkit-animation: menu 1s 1400ms ease-out both;
           animation: menu 1s 1400ms ease-out both;
 }
 
-.plats article:nth-child(4) {
+.plats div:nth-child(4) {
   -webkit-animation: menu 1s 1600ms ease-out both;
           animation: menu 1s 1600ms ease-out both;
 }
@@ -1035,17 +1188,17 @@ footer li:nth-child(2) i {
           animation: menu 1s 1800ms ease-out both;
 }
 
-.desserts article:nth-child(2) {
+.desserts div:nth-child(2) {
   -webkit-animation: menu 1s 2000ms ease-out both;
           animation: menu 1s 2000ms ease-out both;
 }
 
-.desserts article:nth-child(3) {
+.desserts div:nth-child(3) {
   -webkit-animation: menu 1s 2200ms ease-out both;
           animation: menu 1s 2200ms ease-out both;
 }
 
-.desserts article:nth-child(4) {
+.desserts div:nth-child(4) {
   -webkit-animation: menu 1s 2400ms ease-out both;
           animation: menu 1s 2400ms ease-out both;
 }

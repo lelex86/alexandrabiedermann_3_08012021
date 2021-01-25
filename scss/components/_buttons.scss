@@ -1,18 +1,25 @@
 button
 {
-    background: linear-gradient( to bottom, $color-secondary,$color-primary) ;
+    background: $color-btn ;
+    z-index: 1;
     color: white;
     border: none;
     border-radius: 50px;
     text-align: center;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding: 5% 10%;
+    transition-duration: 500ms;
+    &:active
+    {
+        background: $color-btn-light;   
+    }
+    
     @include ordi
     {
-        padding-top: 3%;
-        padding-bottom: 3%;
+        padding: 3% 10%;
+        &:hover
+        {
+            background: $color-btn-light;
+        }
     }
     @include tablette
     {
