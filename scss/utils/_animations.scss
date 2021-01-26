@@ -98,14 +98,12 @@
         opacity: 1;
     }
 }
-
 @keyframes check1
 {
     0% {
-        transform: translateX(80px);
+        transform: translateX(60px);
         opacity: 0;
     }
-
     100% {
         transform: translateX(0);
         opacity: 1;
@@ -127,7 +125,6 @@
     0% {
         opacity: 0;
     }
-
     100%{
         opacity: 1;
     }

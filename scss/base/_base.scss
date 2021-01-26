@@ -14,12 +14,12 @@ body
     }
 }
 
-body, main, h1, h2, h3, section, article, aside, img, p, header, footer
+body, main, h1, h2, h3, section, article, aside, img, p, header, footer,div
 {
     box-sizing: border-box;
 }
 
-h1, h2, h3, p
+h1, h2, h3
 {
     width: fit-content;
 }

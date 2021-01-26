@@ -1,12 +1,12 @@
 .localisation
 {
     text-align: center;
-    background-color: darken($color: $color-fourth, $amount: 10%);
-    box-shadow: darken($color: $color-fourth, $amount: 30%) 0px 1px 2px inset;
+    background-color: darken($color: $color-fourth, $amount: 8%);
+    box-shadow: darken($color: $color-fourth, $amount: 30%) 0px 1px 5px inset;
     ul
     {
         margin: 0;
-        padding: 10px;
+        padding: 5%;
     }
     i
     {
@@ -37,16 +37,19 @@
         align-items: center;
         p
         {
-            color:darken($color: $color-fourth, $amount: 40%)
+            
+            margin: 1% 0 15%;
         }
         h2
         {
             text-align: center;
+            margin: 1% 0;
+            padding: 0 6%;
         }   
     }
     aside
     {
-       
+        padding: 10% 0;
         @include ordi
         {
             width: 50%;
@@ -55,15 +58,20 @@
         {
             width: 50%;
         }
-
         ul
         {
             margin: 2%;
             li
             {
-                width:85%;
                 font-weight: 500;
                 position: relative;
+                text-align: left;
+                padding: 7%;
+                margin: 5% auto;
+                border-radius: 25px;
+                box-shadow: darken($color: $color-fourth, $amount: 10%) 1px 3px 15px;
+                width:75%;
+                white-space: nowrap;
 
                 &:nth-child(1), &:nth-child(2)
                 {
@@ -95,13 +103,13 @@
                     margin: 1%;
                     border-radius: 50%;
                     position: absolute;
-                    bottom: 7%;
-                    right: 97%;
+                    bottom: 25%;
+                    right: 95%;
                 }
                 i
                 {
-                    margin-left:0;
-                    margin-right: 5%;
+                    margin-left:5%;
+                    margin-right: 10%;
                 }
             }
         }
@@ -109,24 +117,13 @@
         {
             text-align: center;
             margin-left: 5%;
-        }
-        li
-        {
-            text-align: left;
-            padding: 3%;
-            margin: 5%;
-            border-radius: 18px;
-            box-shadow: darken($color: $color-fourth, $amount: 10%) 1px 3px;
-            width:70%;
-            white-space: nowrap;
         } 
     }
 }
-
 #choix
 {
     width: 100%;
-    padding: 3%;
+    padding: 10% 3%;
     background-color: $color-fourth;
     @include ordi
     {
@@ -155,10 +152,7 @@
             width: 40%;
         }
         width:90%;
-        margin-top:4%;
-        margin-bottom: 4%;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 4% auto;
         height: 280px;
         border-radius: 12px;
         background-color: white;
@@ -171,26 +165,21 @@
         }
         h3, p
         {
-            margin-left: 2%;
-            margin-right: 0;
-            margin-top: 0;
-            margin-bottom: 0;
+            margin: 0 0 0 2%;
             padding: 1%;
         }
         span
         {
             margin: 0;
             text-align: center;
-            font-size: 0.9rem;
-            padding-top:1%;
-            padding-bottom: 1%;
-            padding-right: 2%;
-            padding-left: 2%;
+            font-size: 0.8rem;
+            font-weight: 500;
+            padding: 2% 3%;
             position: absolute;
-            right: 10%;
+            right: 5%;
             top:5%;
             background-color: $color-tertiary;
-            color: darken($color: $color-tertiary, $amount: 35%);
+            color: darken($color: $color-tertiary, $amount: 38%);
             border-radius: 5px;
         }
         a div:nth-child(1)

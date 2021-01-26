@@ -7,7 +7,7 @@ button
     border-radius: 50px;
     text-align: center;
     padding: 5% 10%;
-    transition-duration: 500ms;
+    transition: all 1s linear 0;
     &:active
     {
         background: $color-btn-light;   
