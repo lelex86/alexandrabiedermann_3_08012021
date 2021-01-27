@@ -1,0 +1,9 @@
+$color-primary:#9356DC;
+$color-secondary:#FF79DA;
+$color-tertiary:#99E2D0;
+$color-fourth: #F2F2F2;
+$color-btn:linear-gradient( to bottom, $color-secondary,$color-primary);
+$color-prim-light: lighten($color-primary, 10%);
+$color-sec-light: lighten($color-secondary, 10%);
+$color-btn-light: linear-gradient( to bottom, $color-sec-light,$color-prim-light);
+

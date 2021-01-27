@@ -1,0 +1,47 @@
+html
+{
+    font-size: 18px;
+}
+
+body
+{
+    width:100%;
+    margin: 0; 
+    @include ordi
+    {
+        width:90%;
+        margin: auto;
+    }
+}
+
+body, main, h1, h2, h3, section, article, aside, img, p, header, footer,div,a,button
+{
+    box-sizing: border-box;
+}
+
+h1, h2, h3
+{
+    width: fit-content;
+}
+
+img
+{
+    object-fit: cover;
+    overflow: hidden;
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
+ul li
+{
+    list-style: none;
+}
+
+ul
+{
+    padding: 0;
+}

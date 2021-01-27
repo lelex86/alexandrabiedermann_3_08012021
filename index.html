@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+    	<!-- En-tête de la page -->
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="./css/main.css" />
+        <link rel="apple-touch-icon" sizes="57x57" href="favicon.ico/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="favicon.ico/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="favicon.ico/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="favicon.ico/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="favicon.ico/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="ffavicon.ico/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="favicon.ico/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="favicon.ico/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon.ico/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="favicon.ico/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="favicon.ico/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico/favicon-16x16.png">
+        <link rel="manifest" href="favicon.ico/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="favicon.ico/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <script src="https://kit.fontawesome.com/8062eaba09.js" crossorigin="anonymous"></script>
+        <title>Ohmyfood</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Vous aimez dégustez des produits de qualité, mais vous êtes trop pressés pour attendre au restaurant? Nous sommes là pour vous! Commandez en un clique et régalez-vous!"/>
+    </head>
+
+    <body>
+        <div class="spinner-container">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+            <div class="circle4"></div>
+            <div class="spinner"><img src="./images/anim/spoon.svg" alt=""></div>           
+        </div>
+        <div class="container">
+            <header>
+                <h1> ohmyfood </h1>
+            </header>
+            <nav class="localisation">
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Paris, Belleville</li>
+                </ul>
+            </nav>
+            <main class="index">
+                <section>
+                    <h2>Réservez le menu qui vous convient</h2>
+                    <p>Découvrez des restaurants d'exception, séléctionnés pas nos soins.</p>
+                    <button><a href="#choix">Explorez nos restaurants</a></button>
+                </section>
+                <aside>
+                    <h2>Fonctionnement</h2>
+                    <ul>
+                        <li><span>1</span><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</li>
+                        <li><span>2</span><i class="fas fa-list-ul"></i>Composez votre menu</li>
+                        <li><span>3</span><i class="fas fa-store"></i>Dégustez au restaurant</li>
+                    </ul>
+                </aside>
+            </main>
+            <section id=choix>
+                <h2>Restaurants</h2>
+                <article>
+                    <a href="lapalette.html">
+                        <div>
+                            <img src="./images/restaurants/palette.jpg" alt="la palette du goût">
+                            <span>Nouveau</span>
+                        </div>
+                        <div class="resto">
+                            <div>
+                                <h3>La palette du goût</h3>
+                                <p>Ménilmontant</p>
+                            </div>
+                            <div class="heart">
+                                <i class="far fa-heart heart--empty"></i>
+                                <i class="fas fa-heart heart--full"></i>
+                            </div>
+                        </div>  
+                    </a>    
+                </article>
+                <article>
+                    <a href="lanote.html">
+                        <div>
+                            <img src="./images/restaurants/note.jpg" alt="La note enchantée">
+                            <span>Nouveau</span>
+                        </div>
+                        <div class="resto">
+                            <div>
+                                <h3>La note enchantée</h3>
+                                <p>Charonne</p>
+                            </div>
+                            <div class="heart">
+                                <i class="far fa-heart heart--empty"></i>
+                                <i class="fas fa-heart heart--full"></i>
+                            </div>
+                        </div>
+                    </a>    
+                </article>
+                <article>
+                    <a href="francaise.html">
+                        <div>
+                            <img src="./images/restaurants/francaise.jpg" alt=" À la française">
+                        </div>
+                        <div class="resto">
+                            <div>
+                                <h3>À la française</h3>
+                                <p>Cité Rouge</p>
+                            </div>
+                            <div class="heart">
+                                <i class="far fa-heart heart--empty"></i>
+                                <i class="fas fa-heart heart--full"></i>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <article>
+                    <a href="ledelice.html">
+                        <div>
+                            <img src="./images/restaurants/delice.jpg" alt="Le délice des sens">
+                        </div>
+                        <div class="resto">
+                            <div>
+                                <h3>Le délice des sens</h3>
+                                <p>Folie-Méricourt</p>
+                            </div>
+                            <div class="heart">
+                                <i class="far fa-heart heart--empty"></i>
+                                <i class="fas fa-heart heart--full"></i>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+            </section>
+            <footer>
+                <h2>ohmyfood</h2>
+                <nav>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a></li>
+                        <li><a href="#"><i class="fas fa-hands-helping"></i>Devenir partenaire</a></li>
+                        <li><a href="#">Mentions légales</a></li>
+                        <li><a href="mailto:info@ohmyfood.com">Contact</a></li>
+                    </ul>
+                </nav>
+            </footer>
+        </div>
+	</body>
+</html>

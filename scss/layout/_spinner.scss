@@ -1,0 +1,86 @@
+.spinner-container {
+	width: 260px;
+	height: 260px;
+	position: absolute;
+    left:20%;
+	top:30%;
+	@include ordi
+	{
+		width: 410px;
+		height: 410px;
+		left: 35%;
+	}
+	.circle1
+	{
+		z-index: 2;
+		width: 250px;
+		height: 250px;
+		border-radius: 50%;
+		border-right: $color-primary 4px solid;
+		position: absolute;
+		animation: circle1 3s 0s both;
+		@include ordi
+		{
+		width: 400px;
+		height: 400px;
+		}
+	}
+	.circle2
+	{
+		z-index: 3;
+		width: 250px;
+		height: 250px;
+		border-radius: 50%;
+		border-bottom: $color-primary 4px solid;
+		position: absolute;
+		animation: circle2 3s 0s both;
+		@include ordi
+		{
+		width: 400px;
+		height: 400px;
+		}
+	}
+	.circle3
+	{
+		z-index: 4;
+		width: 250px;
+		height: 250px;
+		border-radius: 50%;
+		border-left: $color-primary 4px solid;
+		position: absolute;
+		animation: circle3 3s 0s both;
+
+		@include ordi
+		{
+		width: 400px;
+		height: 400px;
+		
+		}
+	}
+	.circle4
+	{
+		z-index: 5;
+		width: 250px;
+		height: 250px;
+		border-radius: 50%;
+		border-top: $color-primary 4px solid;
+		position: absolute;
+		animation: circle4 3s 0s both;
+		@include ordi
+		{
+		width: 400px;
+		height: 400px;
+		
+		}
+	}
+	.spinner {
+		width: 50%;
+		height: 50%;
+		position: relative;
+		left: 50%;
+		z-index: 1;
+		text-align: center;
+		transform-origin: left bottom;
+		animation: spinner 3s 0s both;
+	}
+}
