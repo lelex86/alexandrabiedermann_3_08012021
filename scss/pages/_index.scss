@@ -11,9 +11,9 @@
         {
             padding: 3%;
         }
-        @include ordi
+        @include tablette
         {
-            padding: 3%;
+            padding: 2%;
         }
     }
     i
@@ -21,7 +21,6 @@
         padding-right: 5%;
     }
 }
-
 .index
 {   
     @include ordi
@@ -34,7 +33,6 @@
         display: flex;
         margin-bottom: 2%;
     }
-    
     section
     {
         text-align: center;
@@ -54,7 +52,17 @@
             text-align: center;
             margin: 1% 0 3%;
             padding: 0 6%;
-        }   
+        } 
+        @include ordi
+        {
+            width: 50%;
+            padding: 3% 0;
+        }
+        @include tablette
+        {
+            width: 50%;
+            padding: 3% 0;
+        }  
     }
     aside
     {
