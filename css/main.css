@@ -192,26 +192,26 @@
 
 @-webkit-keyframes check1 {
   0% {
-    -webkit-transform: translateX(60px);
-            transform: translateX(60px);
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
     opacity: 1;
   }
 }
 
 @keyframes check1 {
   0% {
-    -webkit-transform: translateX(60px);
-            transform: translateX(60px);
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
     opacity: 1;
   }
 }
@@ -387,7 +387,7 @@ p {
   font-size: 1rem;
 }
 
-button {
+.btn {
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(to bottom, #FF79DA, #9356DC);
   width: -webkit-fit-content;
@@ -402,33 +402,25 @@ button {
           box-shadow: #8c8c8c 3px 3px 10px;
   -webkit-transition: all 500ms linear 0s;
   transition: all 500ms linear 0s;
-}
-
-button a {
   color: white;
 }
 
-button:active {
+.btn:hover {
   background: -webkit-gradient(linear, left top, left bottom, from(#fface8), to(#ae80e5));
   background: linear-gradient(to bottom, #fface8, #ae80e5);
   -webkit-box-shadow: #8c8c8c 8px 8px 20px;
           box-shadow: #8c8c8c 8px 8px 20px;
+  outline-style: none;
 }
 
 @media screen and (min-width: 1025px) {
-  button {
+  .btn {
     padding: 3% 10%;
-  }
-  button:hover {
-    background: -webkit-gradient(linear, left top, left bottom, from(#fface8), to(#ae80e5));
-    background: linear-gradient(to bottom, #fface8, #ae80e5);
-    -webkit-box-shadow: #8c8c8c 8px 8px 20px;
-            box-shadow: #8c8c8c 8px 8px 20px;
   }
 }
 
 @media screen and (orientation: landscape) and (min-width: 800px) and (max-width: 1025px) {
-  button {
+  .btn {
     padding: 3% 10%;
   }
 }
@@ -463,6 +455,8 @@ button:active {
   width: 100%;
   margin: 0;
   padding: 0;
+  position: relative;
+  z-index: 2;
   -webkit-animation: index 0ms 3s both;
           animation: index 0ms 3s both;
 }
@@ -573,6 +567,7 @@ footer li:nth-child(2) i {
   position: absolute;
   left: 20%;
   top: 30%;
+  z-index: 1;
 }
 
 @media screen and (min-width: 1025px) {
@@ -846,6 +841,9 @@ footer li:nth-child(2) i {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     padding: 5% 3%;
@@ -859,6 +857,9 @@ footer li:nth-child(2) i {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 5% 3%;
   }
 }
@@ -870,7 +871,8 @@ footer li:nth-child(2) i {
 }
 
 #choix article {
-  width: 90%;
+  max-width: 90%;
+  width: 370px;
   margin: 4% auto;
   height: 280px;
   border-radius: 12px;
@@ -879,22 +881,12 @@ footer li:nth-child(2) i {
           box-shadow: #d9d9d9 1px 2px;
 }
 
-@media screen and (orientation: landscape) and (min-width: 800px) and (max-width: 1025px) {
-  #choix article {
-    width: 40%;
-  }
-}
-
-@media screen and (min-width: 1025px) {
-  #choix article {
-    width: 40%;
-  }
-}
-
 #choix article img {
   width: 100%;
   height: 200px;
   border-radius: 12px 12px 0 0;
+  -o-object-position: bottom;
+     object-position: bottom;
 }
 
 #choix article h3, #choix article p {
@@ -931,6 +923,7 @@ footer li:nth-child(2) i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 #choix article .resto div {
@@ -941,7 +934,7 @@ footer li:nth-child(2) i {
 
 .menu .empty {
   background-color: rgba(255, 255, 255, 0);
-  min-height: 230px;
+  min-height: 240px;
 }
 
 @media screen and (min-width: 1025px) {
@@ -999,6 +992,8 @@ footer li:nth-child(2) i {
   padding: 2%;
   width: 100%;
   border-radius: 15px;
+  -webkit-box-shadow: 2px 2px 5px #a6a6a6;
+          box-shadow: 2px 2px 5px #a6a6a6;
   z-index: 2;
   -webkit-transform-origin: left;
           transform-origin: left;
@@ -1067,8 +1062,8 @@ footer li:nth-child(2) i {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-  width: 13%;
-  padding: 3%;
+  width: 15%;
+  padding: 4%;
   margin: 0;
   border-radius: 0 15px 15px 0;
   position: absolute;
@@ -1085,27 +1080,31 @@ footer li:nth-child(2) i {
   color: #99E2D0;
   text-align: center;
   line-height: 30px;
-  width: 30px;
-  height: 30px;
+  min-width: 30px;
+  min-height: 30px;
   font-size: 1.3rem;
-  padding: 1%;
+  padding: 2%;
   border-radius: 50%;
 }
 
-.carte .entrees div:active article, .carte .plats div:active article, .carte .desserts div:active article {
+.carte .entrees div:hover article, .carte .plats div:hover article, .carte .desserts div:hover article {
   border-radius: 15px 0 0 15px;
-  width: 87%;
+  width: 85%;
+  -webkit-box-shadow: -2px -2px 5px #a6a6a6;
+          box-shadow: -2px -2px 5px #a6a6a6;
 }
 
-.carte .entrees div:active .check, .carte .plats div:active .check, .carte .desserts div:active .check {
+.carte .entrees div:hover .check, .carte .plats div:hover .check, .carte .desserts div:hover .check {
   -webkit-animation: check1 1s ease-out 0ms both;
           animation: check1 1s ease-out 0ms both;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-transform-origin: right;
+          transform-origin: right;
 }
 
-.carte .entrees div:active .check i, .carte .plats div:active .check i, .carte .desserts div:active .check i {
+.carte .entrees div:hover .check i, .carte .plats div:hover .check i, .carte .desserts div:hover .check i {
   -webkit-animation: check2 1s ease-out 0ms both;
           animation: check2 1s ease-out 0ms both;
   display: block;
@@ -1114,22 +1113,6 @@ footer li:nth-child(2) i {
 @media screen and (min-width: 1025px) {
   .carte .entrees, .carte .plats, .carte .desserts {
     width: 40%;
-  }
-  .carte .entrees div:hover article, .carte .plats div:hover article, .carte .desserts div:hover article {
-    border-radius: 15px 0 0 15px;
-    width: 87%;
-  }
-  .carte .entrees div:hover .check, .carte .plats div:hover .check, .carte .desserts div:hover .check {
-    -webkit-animation: check1 1s ease-out 0ms both;
-            animation: check1 1s ease-out 0ms both;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .carte .entrees div:hover .check i, .carte .plats div:hover .check i, .carte .desserts div:hover .check i {
-    -webkit-animation: check2 1s ease-out 0ms both;
-            animation: check2 1s ease-out 0ms both;
-    display: block;
   }
 }
 

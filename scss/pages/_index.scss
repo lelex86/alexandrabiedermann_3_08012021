@@ -147,6 +147,7 @@
     @include ordi
     {
         display: flex;
+        justify-content: space-between;
         flex-wrap: wrap;
         padding: 5% 3%;
     }
@@ -154,6 +155,7 @@
     {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
         padding: 5% 3%;
     }
     h2
@@ -164,15 +166,9 @@
     }
     article
     {
-        @include tablette
-        {
-            width: 40%;
-        }
-        @include ordi
-        {
-            width: 40%;
-        }
-        width:90%;
+        
+        max-width:90%;
+        width:370px;
         margin: 4% auto;
         height: 280px;
         border-radius: 12px;
@@ -183,6 +179,7 @@
             width: 100%;
             height:200px;
             border-radius: 12px 12px 0 0;
+            object-position: bottom;
         }
         h3, p
         {
@@ -213,6 +210,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative;
             div
             {
                 flex-grow: 2;

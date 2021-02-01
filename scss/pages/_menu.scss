@@ -3,7 +3,7 @@
     .empty
     {
         background-color: rgba($color: white, $alpha: 0);
-        min-height: 230px;
+        min-height: 240px;
         @include ordi
         {
             min-height: 500px;
@@ -45,6 +45,7 @@
         padding: 2%;
         width: 100%;
         border-radius: 15px;
+        box-shadow: 2px 2px 5px darken($color: $color-fourth, $amount: 30%);
         z-index: 2;
         transform-origin: left;
         transition:all 1s ease-out 100ms;
@@ -100,8 +101,8 @@
                 justify-content: center;
                 align-items: center;
                 height: 100%;
-                width: 13%;
-                padding: 3%;
+                width: 15%;
+                padding: 4%;
                 margin: 0;
                 border-radius: 0 15px 15px 0;
                 position: absolute;
@@ -116,24 +117,26 @@
                 color: $color-tertiary;
                 text-align: center;
                 line-height: 30px;
-                width: 30px;
-                height: 30px;
+                min-width: 30px;
+                min-height: 30px;
                 font-size: 1.3rem;
-                padding: 1%;
+                padding: 2%;
                 border-radius: 50%;
                 }
             }
-            &:active
+            &:hover
             { 
                 article
                 {
                     border-radius: 15px 0 0 15px;
-                    width: 87%;  
+                    width: 85%; 
+                    box-shadow: -2px -2px 5px darken($color: $color-fourth, $amount: 30%); 
                 }
                 .check
                 {
                      animation: check1 1s ease-out 0ms both;
                      display: flex;
+                     transform-origin: right;
                     i
                     {
                     animation: check2 1s ease-out 0ms both;
@@ -145,25 +148,6 @@
         @include ordi
         {
             width: 40%;
-            div:hover
-            {
-                
-                article
-                {
-                    border-radius: 15px 0 0 15px;
-                    width: 87%; 
-                }
-                .check
-                {
-                     animation: check1 1s ease-out 0ms both;
-                     display: flex;
-                    i
-                    {
-                    animation: check2 1s ease-out 0ms both;
-                    display: block;
-                    }
-                }
-            }   
         }
         @include tablette
         {

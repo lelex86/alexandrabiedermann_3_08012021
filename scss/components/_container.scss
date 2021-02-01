@@ -3,5 +3,7 @@
     width: 100%;
     margin: 0;
     padding: 0;
+    position: relative;
+    z-index: 2;
     animation: index 0ms 3s both;
 }
