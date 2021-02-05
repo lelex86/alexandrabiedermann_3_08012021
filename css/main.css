@@ -375,7 +375,7 @@ h3 {
   font-size: 1.1rem;
 }
 
-a, button, li {
+a, button, li, select {
   font-family: 'Roboto';
   font-weight: normal;
   font-size: 1rem;
@@ -426,27 +426,25 @@ p {
 }
 
 .palette {
-  background-image: url(../images/restaurants/palette.jpg);
+  background-image: url(../images/restaurants/La-palette-du-gout.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
 
 .note {
-  background-image: url(../images/restaurants/note.jpg);
+  background-image: url(../images/restaurants/La-note-enchantee.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
-  -o-object-position: bottom;
-     object-position: bottom;
 }
 
 .francaise {
-  background-image: url(../images/restaurants/francaise.jpg);
+  background-image: url(../images/restaurants/A-la-francaise.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
 
 .delice {
-  background-image: url(../images/restaurants/delice.jpg);
+  background-image: url(../images/restaurants/Le-delice-des-sens.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
@@ -663,32 +661,56 @@ footer li:nth-child(2) i {
           animation: spinner 3s 0s both;
 }
 
-.localisation {
+form {
   text-align: center;
   background-color: #dedede;
   -webkit-box-shadow: #a6a6a6 0px 1px 5px inset;
           box-shadow: #a6a6a6 0px 1px 5px inset;
 }
 
-.localisation ul {
+form label {
+  display: none;
+}
+
+form div {
   margin: 0;
   padding: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+form div i {
+  display: block;
+  padding: 0% 5% 0% 0%;
+}
+
+form div select {
+  background-color: #dedede;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0;
+  text-align: center;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
 }
 
 @media screen and (min-width: 1025px) {
-  .localisation ul {
+  form div {
     padding: 3%;
   }
 }
 
 @media screen and (orientation: landscape) and (min-width: 800px) and (max-width: 1025px) {
-  .localisation ul {
+  form div {
     padding: 2%;
   }
-}
-
-.localisation i {
-  padding-right: 5%;
 }
 
 @media screen and (min-width: 1025px) {
@@ -934,7 +956,7 @@ footer li:nth-child(2) i {
 
 .menu .empty {
   background-color: rgba(255, 255, 255, 0);
-  min-height: 240px;
+  min-height: 220px;
 }
 
 @media screen and (min-width: 1025px) {
@@ -1070,6 +1092,8 @@ footer li:nth-child(2) i {
   z-index: 1;
   bottom: 0px;
   right: 0px;
+  -webkit-box-shadow: -2px -2px 5px #a6a6a6;
+          box-shadow: -2px -2px 5px #a6a6a6;
 }
 
 .carte .entrees div .check i, .carte .plats div .check i, .carte .desserts div .check i {

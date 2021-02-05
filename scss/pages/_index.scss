@@ -1,12 +1,33 @@
-.localisation
+form
 {
     text-align: center;
     background-color: darken($color: $color-fourth, $amount: 8%);
     box-shadow: darken($color: $color-fourth, $amount: 30%) 0px 1px 5px inset;
-    ul
+    label
+    {
+        display: none;
+    }
+    div
     {
         margin: 0;
         padding: 5%;
+        display: flex;
+        justify-content: center;
+        i
+        {
+            display: block;
+            padding:0% 5% 0% 0%;
+        }
+        select
+        {
+            background-color: darken($color: $color-fourth, $amount: 8%);
+            width: fit-content;
+            margin: 0;
+            text-align: center;
+            appearance: none;
+            border: none;
+            
+        }
         @include ordi
         {
             padding: 3%;
@@ -15,10 +36,6 @@
         {
             padding: 2%;
         }
-    }
-    i
-    {
-        padding-right: 5%;
     }
 }
 .index

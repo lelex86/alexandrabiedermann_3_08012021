@@ -3,7 +3,7 @@
     .empty
     {
         background-color: rgba($color: white, $alpha: 0);
-        min-height: 240px;
+        min-height: 220px;
         @include ordi
         {
             min-height: 500px;
@@ -109,6 +109,7 @@
                 z-index: 1;
                 bottom: 0px;
                 right: 0px;
+                box-shadow: -2px -2px 5px darken($color: $color-fourth, $amount: 30%);
                 i
                 {
                 display: none;
