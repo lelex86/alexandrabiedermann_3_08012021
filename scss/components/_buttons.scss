@@ -1,0 +1,27 @@
+.btn
+{
+    background: $color-btn ;
+    width: fit-content;
+    white-space: nowrap;
+    border: none;
+    border-radius: 50px;
+    text-align: center;
+    padding: 5% 15%;
+    box-shadow: darken($color: $color-fourth, $amount: 40%) 3px 3px 10px;
+    transition: all 500ms linear 0s;
+    color: white;
+    &:hover
+    {
+        background: $color-btn-light; 
+        box-shadow: darken($color: $color-fourth, $amount: 40%) 8px 8px 20px; 
+        outline-style: none; 
+    }
+    @include ordi
+    {
+        padding: 3% 10%;
+    }
+    @include tablette
+    {
+        padding: 3% 10%;
+    }
+}
