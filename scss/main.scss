@@ -1,23 +1,18 @@
-@import "./utils/variables";
-@import "./utils/mixins";
-@import "./utils/animations";
+@import "utils/variables";
+@import "utils/mixins";
+@import "utils/animations";
 
+@import "base/base";
+@import "base/typography";
 
+@import "components/buttons";
+@import "components/backgrounds";
+@import "components/hearts";
 
-@import "./base/base";
-@import "./base/typography";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/spinner";
+@import "layout/container";
 
-@import "./components/buttons";
-@import "./components/backgrounds";
-@import "./components/container";
-@import "./components/hearts";
-
-
-
-@import "./layout/header";
-@import "./layout/footer";
-@import "./layout/spinner";
-
-
-@import "./pages/index";
-@import "./pages/menu";
+@import "pages/index";
+@import "pages/menu";

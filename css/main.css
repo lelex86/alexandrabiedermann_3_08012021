@@ -449,16 +449,6 @@ p {
   background-repeat: no-repeat;
 }
 
-.container {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  z-index: 2;
-  -webkit-animation: index 0ms 3s both;
-          animation: index 0ms 3s both;
-}
-
 .heart {
   position: relative;
   width: 20px;
@@ -659,6 +649,16 @@ footer li:nth-child(2) i {
           transform-origin: left bottom;
   -webkit-animation: spinner 3s 0s both;
           animation: spinner 3s 0s both;
+}
+
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 2;
+  -webkit-animation: index 0ms 3s both;
+          animation: index 0ms 3s both;
 }
 
 form {
